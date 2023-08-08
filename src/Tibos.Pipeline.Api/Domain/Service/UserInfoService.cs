@@ -539,6 +539,12 @@ namespace Tibos.Pipeline.Api.Domain.Service
                                 response.message = "账号异常!";
                                 return response;
                             }
+                            if(user.Status == 0) 
+                            {
+                                response.code = "-1";
+                                response.message = "账号已禁用!";
+                                return response;
+                            }
                             user.AvatarUrl = request.Avatar;
                             user.NickName = request.NickName;
                             user.Group = string.Join(',', request.Groups??new List<string>());
@@ -604,6 +610,12 @@ namespace Tibos.Pipeline.Api.Domain.Service
                 {
                     response.code = "-1";
                     response.message = "账号异常!";
+                    return response;
+                }
+                if (user.Status == 0)
+                {
+                    response.code = "-1";
+                    response.message = "账号已禁用!";
                     return response;
                 }
                 model.LastLoginTime = DateTime.Now;
