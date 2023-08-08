@@ -1,0 +1,1626 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tibos.Pipeline.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Tibos.Pipeline.Api.Common.EncryptHelper">
+            <summary>
+            加密工具
+            </summary>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesEncrypt_Alipay(System.String,System.String,System.String)">
+            <summary>
+            AES 加密 支付宝SDK
+            </summary>
+            <param name="encryptKey"></param>
+            <param name="bizContent"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesDencrypt_Alipay(System.String,System.String,System.String)">
+            <summary>
+            AES解密 支付宝SDK
+            </summary>
+            <param name="encryptKey"></param>
+            <param name="bizContent"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesEncrypt(System.String,System.String,System.String)">
+            <summary>
+            AES 加密
+            </summary>
+            <param name="encryptKey"></param>
+            <param name="bizContent"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesDencrypt(System.String,System.String,System.String)">
+            <summary>
+            AES解密
+            </summary>
+            <param name="encryptKey"></param>
+            <param name="bizContent"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesEncrypt_Qpay(System.String,System.String,System.String)">
+            <summary>
+            Qpay AES 加密
+            </summary>
+            <param name="encryptKey"></param>
+            <param name="bizContent"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesDencrypt_Qpay(System.String,System.String,System.String)">
+            <summary>
+            Qpay AES 解密
+            </summary>
+            <param name="encryptKey"></param>
+            <param name="bizContent"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesEncrypt_APP(System.String,System.String,System.String)">
+            <summary>
+            腾讯手游APP AES 加密
+            </summary>
+            <param name="encryptKey"></param>
+            <param name="bizContent"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesDencrypt_APP(System.String,System.String,System.String)">
+            <summary>
+            腾讯手游APP AES 解密
+            </summary>
+            <param name="encryptKey"></param>
+            <param name="bizContent"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.RsaSign(System.String,System.String,System.String)">
+            <summary>
+            RSA签名
+            </summary>
+            <param name="data"></param>
+            <param name="privateKey"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.RsaCheck(System.String,System.String,System.String,System.String)">
+            <summary>
+            RSA验签
+            </summary>
+            <param name="signContent"></param>
+            <param name="sign"></param>
+            <param name="publicKey"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.RsaEncrypt(System.String,System.String,System.String)">
+            <summary>
+            RSA加密
+            </summary>
+            <param name="content"></param>
+            <param name="publicKey"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.RsaDecrypt(System.String,System.String,System.String)">
+            <summary>
+            RSA解密
+            </summary>
+            <param name="content"></param>
+            <param name="privateKey"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.Md5Encrypt(System.String,System.String)">
+            <summary>
+            MD5 加密
+            </summary>
+            <param name="content"></param>
+            <param name="charset">编码（utf-8,gb2312)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.Base64Encrypt(System.String,System.String)">
+            <summary>
+            BASE64编码
+            </summary>
+            <param name="content"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.Base64Decrypt(System.String,System.String)">
+            <summary>
+            BASE64解吗
+            </summary>
+            <param name="content"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.ConvertChinese(System.String)">
+            <summary>
+            Unicode 转中文
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.ConvertDBC(System.String)">
+            <summary>
+            转半角
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.IsBase64String(System.String)">
+            <summary>
+             IS base64
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.TripleDesEncrypt(System.String,System.String,System.String)">
+            <summary>
+            TripleDES 加密
+            </summary>
+            <param name="input"></param>
+            <param name="key">设置 TripleDES 算法的机密密钥（24位）</param>
+            <param name="iv">设置对称算法的初始化向量 (IV)（8位）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.DesEncrypt(System.String,System.String,System.String)">
+            <summary>
+            DES 加密
+            </summary>
+            <param name="input">获取或设置对称算法的初始化向量（8位）</param>
+            <param name="key">获取或设置数据加密标准 (DES) 算法的机密密钥（8位）</param>
+            <param name="iv"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.TripleDesDecrypt(System.String,System.String,System.String)">
+            <summary>
+            TripleDES 解密
+            </summary>
+            <param name="input"></param>
+            <param name="key">设置 TripleDES 算法的机密密钥（24位）</param>
+            <param name="iv">设置对称算法的初始化向量(IV)（8位）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.DesDecrypt(System.String,System.String,System.String)">
+            <summary>
+            DES 解密
+            </summary>
+            <param name="input">获取或设置对称算法的初始化向量（8位）</param>
+            <param name="key">获取或设置数据加密标准 (DES) 算法的机密密钥（8位）</param>
+            <param name="iv"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesEncryptFHL(System.String,System.String)">
+            <summary>
+            风火轮登录加密
+            </summary>
+            <param name="content"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesEncryptKaMen(System.String,System.String)">
+            <summary>
+            卡门网登录加密
+            </summary>
+            <param name="encryptKey"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.DesDecryptApi(System.String,System.String)">
+            <summary>
+            DES解密 -云接口（CC）专用
+            </summary>
+            <param name="input">源</param>
+            <param name="key">密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.AesDecryptJdBook(System.String,System.String)">
+            <summary>
+            京东图书features解密
+            </summary>
+            <param name="content"></param>
+            <param name="encryptKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.ToHexString(System.Byte[])">
+            <summary>
+            String To Hex
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.FromHexString(System.String)">
+            <summary>
+            Hex To String
+            </summary>
+            <param name="hexString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.EncryptHelper.Md5Hash(System.String,System.String)">
+            <summary>
+            MD5 加密
+            </summary>
+            <param name="input"></param>
+            <param name="encod">编码（utf-8,gb2312)</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Common.EnumberEntity.Desction">
+            <summary>
+            枚举的描述
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Common.EnumberEntity.EnumName">
+            <summary>
+            枚举名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Common.EnumberEntity.EnumValue">
+            <summary>
+            枚举对象的值
+            </summary>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.HttpClientHelper.PostFrom(System.String,System.String,System.Byte[],System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            form-data
+            </summary>
+            <param name="token"></param>
+            <param name="reauestUrl"></param>
+            <param name="bytes"></param>
+            <param name="fileName"></param>
+            <param name="dic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.HttpClientHelper.DictionaryToStr(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            字典转url参数
+            </summary>
+            <param name="dic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Common.TemplateHelp.CreateProjectApp(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据模板生成项目
+            </summary>
+            <param name="tempPath">模板地址</param>
+            <param name="appPath">项目地址</param>
+            <param name="tempProjectName">模板名称</param>
+            <param name="projectName">项目名称</param>
+        </member>
+        <member name="T:Tibos.Pipeline.Api.Controllers.AppInfoController">
+            <summary>
+            应用管理
+            </summary>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.AppInfoController.Create(Tibos.Pipeline.Api.Model.Request.CreateAppInfoRequest)">
+            <summary>
+            创建
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.AppInfoController.GetById(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.AppInfoController.Update(Tibos.Pipeline.Api.Model.Request.UpdateAppInfoRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.AppInfoController.Delete(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.AppInfoController.GetList(Tibos.Pipeline.Api.Model.Request.GetAppInfoListRequest)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.MyInfoController.Login(Tibos.Pipeline.Api.Model.Request.AccountLoginRequest)">
+            <summary>
+            账号密码登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.MyInfoController.UpdateUserPwd(Tibos.Pipeline.Api.Model.Request.UpdateUserPwdRequest)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.MyInfoController.GetUserTeamList">
+            <summary>
+            查询用户加入的团队
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.MyInfoController.GetUserProjectList">
+            <summary>
+            查询用户参与的项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Tibos.Pipeline.Api.Controllers.ProjectInfoController">
+            <summary>
+            项目管理
+            </summary>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.ProjectInfoController.Create(Tibos.Pipeline.Api.Model.Request.CreateProjectInfoRequest)">
+            <summary>
+            创建
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.ProjectInfoController.GetById(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.ProjectInfoController.Update(Tibos.Pipeline.Api.Model.Request.UpdateProjectInfoRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.ProjectInfoController.Delete(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.ProjectInfoController.GetList(Tibos.Pipeline.Api.Model.Request.GetProjectInfoListRequest)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.SystemController.Routes">
+            <summary>
+            获取路由
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Tibos.Pipeline.Api.Controllers.TeamInfoController">
+            <summary>
+            团队管理
+            </summary>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.Create(Tibos.Pipeline.Api.Model.Request.CreateTeamInfoRequest)">
+            <summary>
+            创建
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.GetById(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.Update(Tibos.Pipeline.Api.Model.Request.UpdateTeamInfoRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.Delete(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.GetList(Tibos.Pipeline.Api.Model.Request.GetTeamInfoListRequest)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.GetGroups">
+            <summary>
+            查询组
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.JoinTeam(Tibos.Pipeline.Api.Model.Request.JoinTeamRequest)">
+            <summary>
+            加入团队
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.GetTeamUserList(Tibos.Pipeline.Api.Model.Request.GetTeamUserListRequest)">
+            <summary>
+            查看团队用户列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.GetNotJoinUserList(System.Int64)">
+            <summary>
+            查询未加入该团队的全部用户
+            </summary>
+            <param name="teamId">团队编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.TeamInfoController.RemoveTeamUser(Tibos.Pipeline.Api.Model.Request.RemoveTeamUserRequest)">
+            <summary>
+            移出团队
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tibos.Pipeline.Api.Controllers.UserInfoController">
+            <summary>
+            用户管理
+            </summary>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.UserInfoController.CreateUserLogin(Tibos.Pipeline.Api.Model.Request.CreateUserLoginRequest)">
+            <summary>
+            创建用户登录类型
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.UserInfoController.GetUserLogin(System.String)">
+            <summary>
+            查询户登录类型
+            </summary>
+            <param name="userId">用户编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.UserInfoController.UpdateUserInfo(Tibos.Pipeline.Api.Model.Request.UpdateUserInfoRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.UserInfoController.UpdateUserStatus(Tibos.Pipeline.Api.Model.Request.UpdateUserStatusRequest)">
+            <summary>
+            修改用户状态
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.UserInfoController.GetUserInfoList(Tibos.Pipeline.Api.Model.Request.GetUserInfoListRequest)">
+            <summary>
+            查询用户列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Controllers.UserInfoController.GetRoles">
+            <summary>
+            获取所有角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Tibos.Pipeline.Api.Domain.PipelineDBContext.MyLoggerFactory">
+            <summary>
+            日志工厂
+            </summary>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.AppInfoService.Create(Tibos.Pipeline.Api.Model.Request.CreateAppInfoRequest)">
+            <summary>
+            创建
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.AppInfoService.Update(Tibos.Pipeline.Api.Model.Request.UpdateAppInfoRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.AppInfoService.Delete(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.AppInfoService.GetById(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.AppInfoService.GetList(Tibos.Pipeline.Api.Model.Request.GetAppInfoListRequest)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.AppInfoService.GetValidRule">
+            <summary>
+            获取权限校验规则
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.GitlabService.Authorize">
+            <summary>
+            获取认证地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.GitlabService.AuthToken(System.String)">
+            <summary>
+            获取token
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.GitlabService.GetUser(System.String)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.GitlabService.GetUserInfo(System.String)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.GitlabService.GetGroups">
+            <summary>
+            查询所有组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.ProjectInfoService.Create(Tibos.Pipeline.Api.Model.Request.CreateProjectInfoRequest)">
+            <summary>
+            创建
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.ProjectInfoService.Update(Tibos.Pipeline.Api.Model.Request.UpdateProjectInfoRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.ProjectInfoService.Delete(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.ProjectInfoService.GetById(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.ProjectInfoService.GetList(Tibos.Pipeline.Api.Model.Request.GetProjectInfoListRequest)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.ProjectInfoService.GetUserProjectList">
+            <summary>
+            查询我的项目
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.ProjectInfoService.GetValidRule">
+            <summary>
+            获取权限校验规则
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.Create(Tibos.Pipeline.Api.Model.Request.CreateTeamInfoRequest)">
+            <summary>
+            创建
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.Update(Tibos.Pipeline.Api.Model.Request.UpdateTeamInfoRequest)">
+            <summary>
+            修改
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.Delete(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.GetById(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.GetList(Tibos.Pipeline.Api.Model.Request.GetTeamInfoListRequest)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.JoinTeam(Tibos.Pipeline.Api.Model.Request.JoinTeamRequest)">
+            <summary>
+            加入团队
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.GetTeamUserList(Tibos.Pipeline.Api.Model.Request.GetTeamUserListRequest)">
+            <summary>
+            查看团队用户列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.GetNotJoinUserList(System.Int64)">
+            <summary>
+            查询未加入该团队的全部用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.RemoveTeamUser(Tibos.Pipeline.Api.Model.Request.RemoveTeamUserRequest)">
+            <summary>
+            移出团队
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.TeamInfoService.GetUserTeamList(System.String)">
+            <summary>
+            查询用户加入的团队
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.GitlabLogin(System.String)">
+            <summary>
+            gitlab 登录
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.Login(Tibos.Pipeline.Api.Model.Request.AccountLoginRequest)">
+            <summary>
+            登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.CreateUserLogin(Tibos.Pipeline.Api.Model.Request.CreateUserLoginRequest)">
+            <summary>
+            创建登录类型
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.UpdateUserInfo(Tibos.Pipeline.Api.Model.Request.UpdateUserInfoRequest)">
+            <summary>
+            修改用户信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.UpdateUserStatus(Tibos.Pipeline.Api.Model.Request.UpdateUserStatusRequest)">
+            <summary>
+            修改用户状态
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.GetUserLogin(System.String)">
+            <summary>
+            查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.GetUserInfoList(Tibos.Pipeline.Api.Model.Request.GetUserInfoListRequest)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.GetRoles">
+            <summary>
+            获取所有角色(排除Admin)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.UpdateUserPwd(Tibos.Pipeline.Api.Model.Request.UpdateUserPwdDto)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.CreateToken(Tibos.Pipeline.Api.Model.Response.UserDto)">
+            <summary>
+            生成token
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.GitlabLogin(Tibos.Pipeline.Api.Model.Request.GitlabLoginRequest)">
+            <summary>
+            gitlab 登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tibos.Pipeline.Api.Domain.Service.UserInfoService.AccountLogin(Tibos.Pipeline.Api.Model.Request.AccountLoginRequest)">
+            <summary>
+            账号登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Config.KubernetesOptions.KubePath">
+            <summary>
+            密钥地址
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.AppInfoEntity.Id">
+            <summary>
+            主键,自增
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.AppInfoEntity.ProjectId">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.AppInfoEntity.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.AppInfoEntity.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.AppInfoEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.AppInfoEntity.CreateUserId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="T:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity">
+            <summary>
+            构建记录
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.HomePage">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.ObjectKind">
+            <summary>
+            命令
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.SHA">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.BuildId">
+            <summary>
+            构建编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.PipelineId">
+            <summary>
+            流水线编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.BuildStatus">
+            <summary>
+            构建状态
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.BuildCreatedAt">
+            <summary>
+            构建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.BuildDuration">
+            <summary>
+            构建时长
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.BuildRecordEntity.RunnerDescription">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Tibos.Pipeline.Api.Model.Entity.ProjectInfoEntity">
+            <summary>
+            用户登录模型
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.ProjectInfoEntity.Id">
+            <summary>
+            主键,自增
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.ProjectInfoEntity.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.ProjectInfoEntity.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.ProjectInfoEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.ProjectInfoEntity.TeamId">
+            <summary>
+            团队编号
+            </summary>
+        </member>
+        <member name="T:Tibos.Pipeline.Api.Model.Entity.PublishRecordEntity">
+            <summary>
+            发布记录
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.PublishRecordEntity.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamInfoEntity.Id">
+            <summary>
+            主键,自增
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamInfoEntity.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamInfoEntity.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamInfoEntity.Logo">
+            <summary>
+            logo
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamInfoEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamInfoEntity.Groups">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamUserMappEntity.Id">
+            <summary>
+            主键,自增
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamUserMappEntity.TeamId">
+            <summary>
+            团队id
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamUserMappEntity.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.TeamUserMappEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Tibos.Pipeline.Api.Model.Entity.UserInfoEntity">
+            <summary>
+            用户实体
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserInfoEntity.Id">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserInfoEntity.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserInfoEntity.Group">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserInfoEntity.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserInfoEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserInfoEntity.AvatarUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserInfoEntity.Roles">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserInfoEntity.Status">
+            <summary>
+            状态(0:禁用,1:启用)
+            </summary>
+        </member>
+        <member name="T:Tibos.Pipeline.Api.Model.Entity.UserLoginEntity">
+            <summary>
+            用户登录模型
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserLoginEntity.Id">
+            <summary>
+            主键,自增
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserLoginEntity.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserLoginEntity.LoginType">
+            <summary>
+            登录类型(0:账号密码,1:gitlab)
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserLoginEntity.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserLoginEntity.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserLoginEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Entity.UserLoginEntity.OpenId">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateAppInfoRequest.ProjectId">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateAppInfoRequest.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateAppInfoRequest.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateProjectInfoRequest.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateProjectInfoRequest.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateProjectInfoRequest.TeamId">
+            <summary>
+            团队编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateTeamInfoRequest.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateTeamInfoRequest.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateTeamInfoRequest.Groups">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateUserLoginRequest.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateUserLoginRequest.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.CreateUserLoginRequest.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetAppInfoListRequest.Name">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetAppInfoListRequest.ProjectId">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetProjectInfoListRequest.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetProjectInfoListRequest.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetTeamInfoListRequest.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetTeamInfoListRequest.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetTeamUserListRequest.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetUserInfoListRequest.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetUserInfoListRequest.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GetUserInfoListRequest.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GitlabLoginRequest.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GitlabLoginRequest.OpenId">
+            <summary>
+            openId
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GitlabLoginRequest.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.GitlabLoginRequest.Groups">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.JoinTeamRequest.UserIds">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.JoinTeamRequest.TeamId">
+            <summary>
+            团队编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.RemoveTeamUserRequest.UserIds">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.RemoveTeamUserRequest.TeamId">
+            <summary>
+            团队编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateProjectInfoRequest.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateTeamInfoRequest.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserInfoRequest.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserInfoRequest.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserInfoRequest.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserInfoRequest.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserInfoRequest.Roles">
+            <summary>
+            角色组
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserPwdRequest.OldPwd">
+            <summary>
+            旧密码
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserPwdRequest.Pwd">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserPwdDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserStatusRequest.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Request.UpdateUserStatusRequest.Status">
+            <summary>
+            状态(0:禁用,1:启用)
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.ChildrenResponse.router">
+            <summary>
+            路由
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.ChildrenResponse.name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.ChildrenResponse.icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.ChildrenResponse.path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.ChildrenResponse.authority">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.ChildrenResponse.children">
+            <summary>
+            子路由
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetAppInfoListResponse.Id">
+            <summary>
+            主键,自增
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetAppInfoListResponse.ProjectId">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetAppInfoListResponse.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetAppInfoListResponse.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetAppInfoListResponse.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetAppInfoListResponse.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetAppInfoListResponse.CreateUserId">
+            <summary>
+            创建人编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetAppInfoListResponse.CreateUserName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetProjectInfoListResponse.Id">
+            <summary>
+            主键,自增
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetProjectInfoListResponse.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetProjectInfoListResponse.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetProjectInfoListResponse.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetProjectInfoListResponse.TeamId">
+            <summary>
+            团队编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetProjectInfoListResponse.TeamName">
+            <summary>
+            团队名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetProjectInfoListResponse.TeamLogo">
+            <summary>
+            团队logo
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetProjectInfoListResponse.AppCount">
+            <summary>
+            应用数量
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetTeamUserListResponse.Id">
+            <summary>
+            主键,唯一
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetTeamUserListResponse.TeamId">
+            <summary>
+            团队id
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetTeamUserListResponse.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetTeamUserListResponse.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetTeamUserListResponse.TeamName">
+            <summary>
+            团队名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetTeamUserListResponse.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetTeamUserListResponse.Logo">
+            <summary>
+            团队logo
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetTeamUserListResponse.AvatarUrl">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserInfoResponse.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserInfoResponse.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserInfoResponse.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserInfoResponse.AvatarUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserInfoResponse.Roles">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserInfoResponse.Status">
+            <summary>
+            状态(0:禁用,1:启用)
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserLoginResponse.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserLoginResponse.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserLoginResponse.Roles">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GetUserLoginResponse.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabLoginResponse.Id">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabLoginResponse.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabLoginResponse.Group">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabLoginResponse.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabLoginResponse.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabLoginResponse.AvatarUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabLoginResponse.OpenId">
+            <summary>
+            openId
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabUserInfoResponse.Sub">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabUserInfoResponse.SubLegacy">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabUserInfoResponse.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabUserInfoResponse.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.GitlabUserInfoResponse.Groups">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.UserInfoResponse.Id">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.UserInfoResponse.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.UserInfoResponse.Group">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.UserInfoResponse.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.UserInfoResponse.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.UserInfoResponse.AvatarUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.UserInfoResponse.Roles">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.UserInfoResponse.Status">
+            <summary>
+            状态(0:禁用,1:启用)
+            </summary>
+        </member>
+        <member name="P:Tibos.Pipeline.Api.Model.Response.UserInfoResponse.LoginTypes">
+            <summary>
+            登录方式
+            </summary>
+        </member>
+        <member name="F:Tibos.Pipeline.Api.Program.container">
+            <summary>
+            Autofac全局对象
+            </summary>
+        </member>
+        <member name="P:Tibos.Domain.Service.UserInfoExtensions.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Tibos.Domain.Service.UserInfoExtensions.Roles">
+            <summary>
+            角色组
+            </summary>
+        </member>
+        <member name="P:Tibos.Domain.Service.UserInfoExtensions.IsAdmin">
+            <summary>
+            是否为管理员
+            </summary>
+        </member>
+    </members>
+</doc>
