@@ -5,7 +5,6 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Tibos.Domain.Service;
 using Tibos.Pipeline.Api.Common;
 using Tibos.Pipeline.Api.Domain.IService;
 using Tibos.Pipeline.Api.Model.Config;

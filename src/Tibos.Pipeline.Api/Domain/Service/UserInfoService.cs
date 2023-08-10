@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -15,7 +16,7 @@ using Tibos.Pipeline.Api.Model.Response;
 
 namespace Tibos.Pipeline.Api.Domain.Service
 {
-    public class UserInfoService: IUserInfoService
+    public class UserInfoService: UserInfoExtensions,IUserInfoService
     {
         private readonly PipelineDBContext _context;
         private readonly IMapper _mapper;
@@ -354,6 +355,33 @@ namespace Tibos.Pipeline.Api.Domain.Service
 
 
         /// <summary>
+        /// 查询用户信息
+        /// </summary>
+        /// <returns></returns>
+        public async Task<JsonResponse<UserInfoResponse>> GetUserInfo()
+        {
+            var response = new JsonResponse<UserInfoResponse> ();
+            try
+            {
+                var model = await _context.UserInfo.FirstOrDefaultAsync(m=>m.Id == UserId);
+                if(model == null) 
+                {
+                    response.code = "-1";
+                    response.message = "用户不存在!";
+                    return response;
+                }
+                response.data = _mapper.Map<UserInfoResponse>(model);
+                response.data.LoginTypes = await _context.UserLogin.Where(m => m.UserId == UserId).Select(m => m.LoginType).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                response.code = "-1";
+                response.message = ex.Message;
+            }
+            return response;
+        }
+
+        /// <summary>
         /// 获取所有角色(排除Admin)
         /// </summary>
         /// <returns></returns>
@@ -505,7 +533,8 @@ namespace Tibos.Pipeline.Api.Domain.Service
                                 Group = string.Join(',', request.Groups??new List<string>()),
                                 NickName = request.NickName,
                                 Phone = "",
-                                Roles = RoleType.Other.ToString()
+                                Roles = RoleType.Other.ToString(),
+                                Status = 1
                             };
 
                             model = new UserLoginEntity()

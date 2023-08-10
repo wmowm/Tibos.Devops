@@ -42,8 +42,8 @@
                       placeholder="请选择组"
                       @change="handleChange"
             >
-            <a-select-option v-for="item in this.groupList" :key="item.name">
-            {{item.name}}
+            <a-select-option v-for="item in this.groupList" :key="item">
+            {{item}}
             </a-select-option>
           </a-select>
         </a-form-model-item>
@@ -95,7 +95,7 @@
 <script>
 
 import {createApp,} from '@/services/app';
-import {getGroups} from '@/services/team';
+import {getUserInfo} from '@/services/user';
 import {getTemplateList} from '@/services/template';
 export default {
   name: 'AddApp',
@@ -157,16 +157,21 @@ export default {
       this.form.projectName=projectName
       this.form.group=''
       this.form.templateId=''
-      this.getGroups()
+      this.getUserInfo()
       this.getTemplateList({pageIndex:1,pageSize:100000})
     },
-    getGroups(){
-      getGroups().then(this.afterGetGroups)  
+    getUserInfo(){
+      getUserInfo().then(this.afterGetUserInfo)  
     },
-    afterGetGroups(res){
+    afterGetUserInfo(res){
       const data = res.data
       if(data.code == '0'){
-        this.groupList = data.data
+        console.log(data.data.group)
+        if(data.data.group ==null || data.data.group =='' || data.data.group == undefined){
+          this.groupList =[]
+        }else{
+          this.groupList = data.data.group.split(',')
+        }
       }else{
             this.$message.error(data.message)
         }

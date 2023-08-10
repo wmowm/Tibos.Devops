@@ -102,5 +102,17 @@ namespace Tibos.Pipeline.Api.Controllers
             var res = await _appInfoService.GetFavoriteAppList();
             return Ok(res);
         }
+
+        /// <summary>
+        /// 查询用户信息
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [ProducesResponseType(typeof(JsonResponse<UserInfoResponse>), 200)]
+        public async Task<IActionResult> GetUserInfo()
+        {
+            var res = await _userInfoService.GetUserInfo();
+            return Ok(res);
+        }
     }
 }

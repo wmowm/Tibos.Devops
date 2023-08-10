@@ -55,6 +55,7 @@ module.exports = {
   GETUSERTEAMLIST: `${BASE_URL}/api/myinfo/getuserteamlist`,
   GETUSERPROJECTLIST: `${BASE_URL}/api/myinfo/getuserprojectlist`,
   GETFAVORITEAPPLIST: `${BASE_URL}/api/myinfo/getfavoriteapplist`,
+  GETUSERINFO: `${BASE_URL}/api/myinfo/getuserinfo`,
   //#endregion
 
 

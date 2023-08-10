@@ -9,7 +9,6 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Xml.Linq;
-using Tibos.Domain.Service;
 using Tibos.Pipeline.Api.Common;
 using Tibos.Pipeline.Api.Domain.IService;
 using Tibos.Pipeline.Api.Model.Config;

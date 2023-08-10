@@ -7,7 +7,7 @@ using System.Text;
 using Tibos.Pipeline.Api;
 using Tibos.Pipeline.Api.Model.Enum;
 
-namespace Tibos.Domain.Service
+namespace Tibos.Pipeline.Api.Domain.Service
 {
     public class UserInfoExtensions
     {

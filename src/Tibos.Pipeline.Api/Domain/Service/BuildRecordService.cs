@@ -8,10 +8,9 @@ using Tibos.Pipeline.Api.Model.Request;
 using Tibos.Pipeline.Api.Model.Response;
 using Tibos.Pipeline.Api.Domain;
 using Tibos.Pipeline.Api.Common;
-using Tibos.Domain.Service;
 using Tibos.Pipeline.Api.Model.Enum;
 
-namespace TTibos.Pipeline.Api.Domain.Service
+namespace Tibos.Pipeline.Api.Domain.Service
 {
     public class BuildRecordService : UserInfoExtensions,IBuildRecordService
     {

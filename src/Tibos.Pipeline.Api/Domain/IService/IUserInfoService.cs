@@ -20,6 +20,8 @@ namespace Tibos.Pipeline.Api.Domain.IService
 
         Task<JsonResponse<List<UserInfoResponse>>> GetUserInfoList(GetUserInfoListRequest request);
 
+        Task<JsonResponse<UserInfoResponse>> GetUserInfo();
+
         Task<JsonResponse<List<EnumberEntity>>> GetRoles();
 
         Task<JsonResponse> UpdateUserPwd(UpdateUserPwdDto request);
