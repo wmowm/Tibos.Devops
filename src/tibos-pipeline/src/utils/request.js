@@ -222,6 +222,7 @@ function loadInterceptors(interceptors, options) {
           localStorage.removeItem(process.env.VUE_APP_PERMISSIONS_KEY)
           localStorage.removeItem(process.env.VUE_APP_ROLES_KEY)
           removeAuthorization()
+          this.$router.push('/login')
         }
         return response;
       },

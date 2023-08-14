@@ -23,14 +23,14 @@ const assetsCDN = {
   css: [
   ],
   js: [
-    'https://tibos-1256222548.cos.ap-beijing.myqcloud.com/vue/vue.min.js',
-    'https://tibos-1256222548.cos.ap-beijing.myqcloud.com/vue/vue-router.min.js',
-    'https://tibos-1256222548.cos.ap-beijing.myqcloud.com/vue/vuex.min.js',
-    'https://tibos-1256222548.cos.ap-beijing.myqcloud.com/vue/axios.min.js',
-    'https://tibos-1256222548.cos.ap-beijing.myqcloud.com/vue/nprogress.min.js',
-    'https://tibos-1256222548.cos.ap-beijing.myqcloud.com/vue/clipboard.min.js',
-    'https://tibos-1256222548.cos.ap-beijing.myqcloud.com/vue/data-set.min.js',
-    'https://tibos-1256222548.cos.ap-beijing.myqcloud.com/vue/js.cookie.min.js'
+    'https://img.wmowm.com/js/vue.min.js',
+    'https://img.wmowm.com/js/vue-router.min.js',
+    'https://img.wmowm.com/js/vuex.min.js',
+    'https://img.wmowm.com/js/axios.min.js',
+    'https://img.wmowm.com/js/nprogress.min.js',
+    'https://img.wmowm.com/js/clipboard.min.js',
+    'https://img.wmowm.com/js/data-set.min.js',
+    'https://img.wmowm.com/js/js.cookie.min.js'
   ]
 }
 

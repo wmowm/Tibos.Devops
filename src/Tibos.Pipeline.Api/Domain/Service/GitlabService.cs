@@ -30,7 +30,8 @@ namespace Tibos.Pipeline.Api.Domain.Service
             var response = new JsonResponse<string>();
             try
             {
-                var url = $"http://gitlab.wmowm.com:880/oauth/authorize?response_type=code&client_id={_options.Value.AppId}&redirect_uri={_options.Value.CallbackUrl}&scope={_options.Value.Scope}";
+                var authorizeUrl = _options.Value.AuthorizeUrl;
+                var url = $"{authorizeUrl}?response_type=code&client_id={_options.Value.AppId}&redirect_uri={_options.Value.CallbackUrl}&scope={_options.Value.Scope}";
                 response.data = url;
                 return response;
             }
